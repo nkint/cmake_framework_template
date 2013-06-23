@@ -1,0 +1,3 @@
+message(" === /modules/foo")
+
+add_library(foo foo.h foo.cpp)

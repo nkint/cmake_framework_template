@@ -1,0 +1,7 @@
+cmake_minimum_required(VERSION 2.8)
+
+message(" === /")
+
+project(myproject)
+add_subdirectory(modules/foo)
+add_subdirectory(apps/test1)
