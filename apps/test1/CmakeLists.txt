@@ -1,12 +1,13 @@
 cmake_minimum_required(VERSION 2.8)
+project(test1)
 message(" === apps/test1")
 
-set(LIB)
+# global variables
+set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_SOURCE_DIR}/../../cmake")
+set(LIB) # to be filled with libraries to use in this project
 
-message("     including the module foo")
-include_directories(${CMAKE_SOURCE_DIR}/modules/foo)
-link_directories(${CMAKE_SOURCE_DIR}/modules/foo)
-set(LIB foo)
+
+find_package(foo)
 
 add_executable(test1 main.cpp)
 
