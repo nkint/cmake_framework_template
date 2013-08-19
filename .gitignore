@@ -62,3 +62,13 @@ install_manifest.txt
 # shadow build.. does not track build directories
 ######################
 build
+
+# qtcreator user setting
+######################
+*.user
+*.pro.user
+*.pro.user.*
+moc_*.cpp
+qrc_*.cpp
+Makefile
+*-build-*
