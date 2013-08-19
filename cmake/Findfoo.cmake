@@ -1,11 +1,14 @@
+cmake_minimum_required(VERSION 2.8.10)
 message(" === Findfoo.cmake")
 
-# add_subdirectory hack : 
-# repository_path/modules/foo is not a subdirectory if called from repository/apps/test1
-# http://stackoverflow.com/questions/7980784/cmake-add-sub-directory-which-is-not-sub-directory-on-real-directory
-add_subdirectory(${CMAKE_CURRENT_LIST_DIR}/../modules/foo ${CMAKE_CURRENT_LIST_DIR}/foo)
+set(PACKAGE_NAME "foo")
 
-include_directories(${CMAKE_CURRENT_LIST_DIR}/../modules/foo)
-link_directories(${CMAKE_CURRENT_LIST_DIR}/../modules/foo)
+# here the sould be a check if it is already built or not..
+# with this line it is building in modules/foo/build
+add_subdirectory(${CMAKE_CURRENT_LIST_DIR}/../modules/${PACKAGE_NAME} 
+                 ${CMAKE_CURRENT_LIST_DIR}/../modules/${PACKAGE_NAME}/build
+)
+
+include_directories(${CMAKE_CURRENT_LIST_DIR}/../modules/${PACKAGE_NAME}/include)
 
 set(LIB ${LIB} foo)

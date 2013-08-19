@@ -1,6 +1,5 @@
 #include <iostream>
-
-#include "foo.h"
+#include "foo/foo.h"
 
 int main() {
 	std::cout << "main" << std::endl;
