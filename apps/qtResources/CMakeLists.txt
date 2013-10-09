@@ -9,6 +9,7 @@ set(LIB)
 set(PROJECTNAME "qtResources")
 project(${PROJECTNAME} C CXX)
 set (CMAKE_CXX_FLAG "-Wall")
+set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_SOURCE_DIR}/../../cma
 
 # libraries
 find_package(Qt4 COMPONENTS QtCore QtGUI REQUIRED)
