@@ -1,20 +1,18 @@
 cmake_minimum_required(VERSION 2.8.10)
 message(" === /modules/foo")
-set(PROJECTNAME "foo")
-project($(PROJECTNAME) C CXX)
+set(MODULE_NAME "foo")
+project(${MODULE_NAME} C CXX)
 
-include_directories(include/${PROJECTNAME})
-include_directories(src)
-
-set(${PROJECTNAME}_HEADERS
+set(${MODULE_NAME}_HEADERS
     include/foo/foo.h
 )
 
-set(${PROJECTNAME}_SOURCES
+set(${MODULE_NAME}_SOURCES
     src/foo.cpp    
 )
 
-add_library(${PROJECTNAME}
-            ${${PROJECTNAME}_HEADERS}
-            ${${PROJECTNAME}_SOURCES}
+add_library(${MODULE_NAME}
+            ${${MODULE_NAME}_HEADERS}
+            ${${MODULE_NAME}_SOURCES}
 )
+include_directories(include)
