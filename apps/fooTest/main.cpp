@@ -4,6 +4,8 @@
 int main() {
 	std::cout << "main" << std::endl;
 
+
+
 	Foo foo;
 	foo.foo();
 
