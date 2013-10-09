@@ -8,14 +8,18 @@ project(${PROJECTNAME} C CXX)
 set (CMAKE_CXX_FLAG "-Wall")
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY "bin/")
 
-find_package(Qt4 COMPONENTS QtCore QtGUI REQUIRED)
-include(${QT_USE_FILE})
+# Libraries
+###########################################################
 
 # opengl
 find_package(OpenGL REQUIRED)
 find_package(GLUT)
 set(QT_USE_QTOPENGL TRUE)
 set(LIB ${LIB} ${OPENGL_LIBRARIES})
+
+# qt
+find_package(Qt4 COMPONENTS QtCore QtGUI REQUIRED)
+include(${QT_USE_FILE})
 
 # Source Code
 ###########################################################

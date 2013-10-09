@@ -3,7 +3,7 @@
 
 #include <QMainWindow>
 #include <QLabel>
-#include "foo/foo.h"
+#include "glwidget.h"
 
 namespace Ui {
 class MainWindow;
@@ -20,6 +20,7 @@ public:
 private:
     Ui::MainWindow *ui;
     QLabel *l;
+    GLWidget *w;
 
 private slots:
     void changeText();
