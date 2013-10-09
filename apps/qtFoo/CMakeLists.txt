@@ -1,16 +1,13 @@
 cmake_minimum_required(VERSION 2.8)
 message(" === apps/qtFoo")
-
-# global variables
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_SOURCE_DIR}/../../cmake")
-set(LIB)
 
 # project
 set(PROJECTNAME "qtFoo")
 project(${PROJECTNAME} C CXX)
 set (CMAKE_CXX_FLAG "-Wall")
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY "bin/")
 
-# libraries
 find_package(Qt4 COMPONENTS QtCore QtGUI REQUIRED)
 include(${QT_USE_FILE})
 
