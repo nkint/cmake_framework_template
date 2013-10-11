@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 2.8)
+message(" === Find GL")
+find_package(OpenGL)
+find_package(GLUT)
+set(QT_USE_QTOPENGL TRUE)
+set(LIB ${LIB} ${OPENGL_LIBRARIES})

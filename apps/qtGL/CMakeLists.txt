@@ -11,11 +11,7 @@ set(CMAKE_RUNTIME_OUTPUT_DIRECTORY "bin/")
 # Libraries
 ###########################################################
 
-# opengl
-find_package(OpenGL REQUIRED)
-find_package(GLUT)
-set(QT_USE_QTOPENGL TRUE)
-set(LIB ${LIB} ${OPENGL_LIBRARIES})
+find_package(GL)
 
 # qt
 find_package(Qt4 COMPONENTS QtCore QtGUI REQUIRED)
