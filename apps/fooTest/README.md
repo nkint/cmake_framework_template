@@ -4,9 +4,9 @@ the module foo.
 
 example of shadow build:
 (starting from the repository root)
-$ mkdir build
 $ cd build
-$ mkdir test1
-$ cmake ../../apps/test1
+$ mkdir fooTest
+$ cmake ../../apps/fooTest
 $ make
-$ ./test1
+$ cd bin
+$ ./fooTest
